@@ -1,0 +1,1 @@
+ALL_BATTLES = 'https://docs.google.com/spreadsheets/d/1nfOAwwpFE4SA8eemkqlJpC7lxlnPjuVu1oD6V3hyr6w/edit?usp=sharing'
