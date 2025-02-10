@@ -4,12 +4,31 @@ import sys
 from battles.one_s.all_balltles_one_s import ALL_BATTLES
 from links.links_for_projects.links_projects import BSB_LINK, BST_LINK, BSN_LINK
 import os
-
-TOKIN = input('Пожалуйста, введи свой API токен от BotFather:\n')
+from colorama import Fore
+from art import tprint
+from banner_choice import banner
 sys.path.append('/home/haku/BS')
 
+lbs = tprint('launcher   Brilliant   segments')
 
-bot = telebot.TeleBot(TOKIN)
+print(banner)
+
+choice_operations = int(input('Введите номер операци:\n'))
+
+if choice_operations == 1:
+    TOKIN = input('Пожалуйста, введи свой API токен от BotdFather:\n')
+elif choice_operations == 2:
+    print('https://t.me/+qYRwfhNobn8xOTI6')
+    exit()
+else:
+    print(Fore.RED +'Что то пошло не так! Перезапустите программу в введите валидный номер!')
+
+
+try:
+   bot = telebot.TeleBot(TOKIN)
+except Exception:
+    print(Fore.RED + "Токин неверный или произошла ошибка! Перезапустите программу и введите токен снова.")
+    exit()
 
 
 @bot.message_handler(commands=['start'])              
